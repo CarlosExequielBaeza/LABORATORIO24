@@ -5,6 +5,7 @@
 package tp1ej1;
 import java.util.ArrayList;
 import java.util.Scanner;
+import java.util.Iterator;
 /**
  *
  * @author litob
@@ -20,6 +21,7 @@ public class TP1EJ1 {
         String letra= "";
         int i;
         String raza;
+        String eliminar;
         ArrayList<String> razas= new ArrayList<>();
         while (!letra.equals("n") && !letra.equals("N")){
             System.out.print("Ingrese una raza de perro: ");
@@ -34,7 +36,27 @@ public class TP1EJ1 {
                 }
             }
         }
-
+        //Ejercicio 2
+         boolean perro = false;
+         System.out.print("\n Ingrese una raza de perro para eliminar: ");
+         eliminar = scanner.nextLine();
+         Iterator<String> it= razas.iterator();
+         while (it.hasNext()){
+                if (it.next().equals(eliminar)) {
+                it.remove();
+                perro=true;
+                }
+         }
+         if (perro){
+             for (i =0; i < razas.size(); i++) {
+                System.out.println(razas.get(i));
+                }
+         }else {
+                System.out.print("\n El perro no se encontró en la lista \n");
+                for (i =0; i < razas.size(); i++) {
+                System.out.println(razas.get(i));
+                }
+          }
     }
     
 }
