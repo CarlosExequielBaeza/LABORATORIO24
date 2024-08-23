@@ -22,7 +22,8 @@ public class TP1EJ1 {
         int i;
         String raza;
         String eliminar;
-        ArrayList<String> razas= new ArrayList<>();
+        ArrayList<String> razas; //Creo el ArrayList razas
+        razas=new ArrayList<>();// Inicializo el ArrayList razas
         while (!letra.equals("n") && !letra.equals("N")){
             System.out.print("Ingrese una raza de perro: ");
             raza = scanner.nextLine();
