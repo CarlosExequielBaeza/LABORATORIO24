@@ -1,6 +1,7 @@
 package tp1ej3;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 import java.util.Scanner;
 
@@ -38,10 +39,26 @@ public class TP1EJ3 {
         }
 
         // Mostrar las películas agregadas
-        System.out.println("Películas agregadas:");
+    //    System.out.println("Películas agregadas:");
+      //  for (Pelicula elementos : peliculas) {
+        //    System.out.println(elementos);
+        //}
+        
+        //Mostrar en pantalla todas las peliculas con duracion mayor a 1 hora
+        System.out.println("Peliculas con una duración mayor a 1 hora \n");
         for (Pelicula elementos : peliculas) {
+            if (elementos.getDuracion()>1){
+            System.out.println(elementos);
+            }
+        }
+        
+        // Ordenar las peliculas de acuerdo a su duracion de mayor a menor para luego mostrar en pantalla
+        Collections.sort(peliculas);
+        System.out.println("Películas agregadas:");
+         for (Pelicula elementos : peliculas) {
             System.out.println(elementos);
         }
+        
 
         teclado.close();
     }

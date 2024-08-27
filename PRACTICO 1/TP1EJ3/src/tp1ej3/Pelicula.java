@@ -8,7 +8,7 @@ package tp1ej3;
  *
  * @author litob
  */
-public class Pelicula {
+public class Pelicula implements Comparable <Pelicula> {
     String titulo;
     String director;
     double duracion;
@@ -34,5 +34,12 @@ public class Pelicula {
     public String toString() {
         return "Título: " + titulo + ", Director: " + director + ", Duración: " + duracion + " horas";
     }
+
+    @Override
+   public int compareTo(Pelicula o) {
+    if (this.duracion > o.duracion) return 1;
+    else if (this.duracion < o.duracion) return -1;
+    else return 0;
+}
     
 }
