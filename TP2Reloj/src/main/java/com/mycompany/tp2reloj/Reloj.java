@@ -5,6 +5,7 @@
 package com.mycompany.tp2reloj;
 
 import java.time.LocalDate;
+import java.time.LocalTime;
 
 /**
  *
@@ -17,6 +18,8 @@ public class Reloj {
     String dia;
 
     public Reloj() {
+        LocalTime horaActual = LocalTime.now();
+        hora=horaActual.toString();
     }
 
     public String getModelo() {

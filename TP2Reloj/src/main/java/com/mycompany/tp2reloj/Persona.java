@@ -13,6 +13,7 @@ public class Persona {
     String apellido;
     int edad;
     double altura;
+    Reloj r1;
 
     public Persona(String nombre, String apellido, int edad, double altura) {
         this.nombre = nombre;
@@ -49,17 +50,18 @@ public class Persona {
         return altura;
     }
 
-    public void setAltura(double altura) {
+    /*public void setAltura(double altura) {
         this.altura = altura;
-    }
+    }*/
     public void hablar() {
         System.out.println("¡Hola!");
     }
     public void comer() {
         System.out.println("Me estoy comiendo unos sanguches");
     }
-   /* public void decirHora() {
-        System.out.println("La hora es");
-    }*/
-    
+    public String decirHora(Reloj r1) {
+    return "La hora es: " + r1.getHora();
+    }
+
+   
 }
