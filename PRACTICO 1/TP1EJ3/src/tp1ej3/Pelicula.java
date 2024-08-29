@@ -11,9 +11,9 @@ package tp1ej3;
 public class Pelicula implements Comparable <Pelicula> {
     String titulo;
     String director;
-    double duracion;
+    Integer duracion;
     
-    public Pelicula (String titulo, String director, double duracion){ //Const
+    public Pelicula (String titulo, String director, Integer duracion){ //Const
         this.titulo= titulo;
         this.director=director;
         this.duracion=duracion;
@@ -27,7 +27,7 @@ public class Pelicula implements Comparable <Pelicula> {
         return director;
     }
 
-    public double getDuracion() {
+    public Integer getDuracion() {
         return duracion;
     }
     @Override
@@ -36,10 +36,10 @@ public class Pelicula implements Comparable <Pelicula> {
     }
 
     @Override
-   public int compareTo(Pelicula o) {
+   public int compareTo(Pelicula o) { //Comparar usando la interfaz Comparable
     if (this.duracion > o.duracion) return 1;
     else if (this.duracion < o.duracion) return -1;
     else return 0;
 }
-    
+   
 }

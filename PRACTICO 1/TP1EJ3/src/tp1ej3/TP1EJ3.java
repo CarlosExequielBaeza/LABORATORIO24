@@ -12,7 +12,7 @@ public class TP1EJ3 {
         String respuesta = "S";
         String titulo;
         String director;
-        double duracion;
+        Integer duracion;
 
         List<Pelicula> peliculas;
         peliculas=new ArrayList<>();
@@ -26,7 +26,7 @@ public class TP1EJ3 {
             director = teclado.nextLine();
 
             System.out.println("Introduzca la duración de la película:");
-            duracion = teclado.nextDouble();
+            duracion = teclado.nextInt();
             teclado.nextLine(); // Consumir la nueva línea después de nextDouble()
 
             
@@ -38,26 +38,45 @@ public class TP1EJ3 {
             respuesta = teclado.nextLine();
         }
 
-        // Mostrar las películas agregadas
-    //    System.out.println("Películas agregadas:");
-      //  for (Pelicula elementos : peliculas) {
-        //    System.out.println(elementos);
-        //}
+        // A) Mostrar las películas agregadas
+        System.out.println("Películas agregadas:");
+        for (Pelicula elementos : peliculas) {
+            System.out.println(elementos);
+        }
         
-        //Mostrar en pantalla todas las peliculas con duracion mayor a 1 hora
-        System.out.println("Peliculas con una duración mayor a 1 hora \n");
+        // B) Mostrar en pantalla todas las peliculas con duracion mayor a 1 hora
+        System.out.println("Peliculas con una duración mayor a 1 hora");
         for (Pelicula elementos : peliculas) {
             if (elementos.getDuracion()>1){
             System.out.println(elementos);
             }
         }
         
-        // Ordenar las peliculas de acuerdo a su duracion de mayor a menor para luego mostrar en pantalla
-        Collections.sort(peliculas);
-        System.out.println("Películas agregadas:");
+        // C) Ordenar las peliculas de acuerdo a su duracion de mayor a menor para luego mostrar en pantalla. Yo uso Comparable
+       Collections.sort(peliculas);
+       System.out.println("Películas agregadas ordenadas de mayor a menor:");
          for (Pelicula elementos : peliculas) {
             System.out.println(elementos);
         }
+        // D) Ordenar peliculas de menor a mayor COMPARATOR
+        Collections.sort(peliculas);
+       System.out.println("Películas agregadas ordenadas de menor a mayor:");
+         for (Pelicula elementos : peliculas) {
+            System.out.println(elementos);
+        }
+        // E) Ordenar peliculas por título COMPARATOR
+        Collections.sort(peliculas, new OrdenamientoPorTitulo());
+        System.out.println("Películas Ordenadas por titulo:");
+         for (Pelicula elementos : peliculas) {
+            System.out.println(elementos);
+        }
+        // F) Ordenar peliculas por nombre del director COMPARATOR
+        Collections.sort(peliculas, new OrdenamientoPorDirector());
+        System.out.println("Películas ordenadas por nombre del director:");
+         for (Pelicula elementos : peliculas) {
+            System.out.println(elementos);
+        }
+       
         
 
         teclado.close();
