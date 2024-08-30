@@ -67,11 +67,8 @@ public class Persona {
     }
     public void usarReloj(Reloj r1, int i) {
        System.out.println("DIA INCREMENTADO " + r1.incrementarDia(i));
+       System.out.println("DIA INCREMENTADO " + r1.incrementarHora(i));
     }
-    
-   /* public String incrementarDia(Reloj r1) {
-    return r1.incrementarDia(1);
-    }*/
     
    
 }

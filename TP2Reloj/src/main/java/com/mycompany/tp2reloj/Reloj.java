@@ -62,12 +62,14 @@ public class Reloj {
         return dia;
     }
    
-  /* public void incrementarHora(int n){
-        LocalDate sumar =dia.plusDays(n);
-        dia=sumar;
-        System.out.println("incrementando dia: "+getDia()+"/"+dia.getMonth() ); 
-    
-    public void limpiarPantalla(int n){
+    public String incrementarHora(int n){
+        LocalTime horaPlus = LocalTime.parse(hora);
+        horaPlus=horaPlus.plusHours(n);
+        hora=horaPlus.toString();
+        return hora; 
+    }
+
+   /* public void limpiarPantalla(int n){
         LocalDate sumar =dia.plusDays(n);
         dia=sumar;
         System.out.println("incrementando dia: "+getDia()+"/"+dia.getMonth() );   
