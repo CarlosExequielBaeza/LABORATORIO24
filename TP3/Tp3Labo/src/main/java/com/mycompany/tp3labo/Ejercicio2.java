@@ -35,7 +35,7 @@ public class Ejercicio2 extends javax.swing.JFrame {
         jbConvertir = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("DE Celsius a Fahrenheit");
+        setTitle("De Celsius a Fahrenheit");
         setAlwaysOnTop(true);
         setBackground(new java.awt.Color(0, 255, 255));
 
