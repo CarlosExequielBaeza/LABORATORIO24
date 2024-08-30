@@ -50,9 +50,9 @@ public class Persona {
         return altura;
     }
 
-    /*public void setAltura(double altura) {
+    public void setAltura(double altura) {
         this.altura = altura;
-    }*/
+    }
     public void hablar() {
         System.out.println("¡Hola!");
     }
@@ -60,8 +60,18 @@ public class Persona {
         System.out.println("Me estoy comiendo unos sanguches");
     }
     public String decirHora(Reloj r1) {
-    return "La hora es: " + r1.getHora();
+     return r1.getHora();
     }
-
+    public String decirFecha(Reloj r1) {
+    return r1.getDia();
+    }
+    public void usarReloj(Reloj r1, int i) {
+       System.out.println("DIA INCREMENTADO " + r1.incrementarDia(i));
+    }
+    
+   /* public String incrementarDia(Reloj r1) {
+    return r1.incrementarDia(1);
+    }*/
+    
    
 }

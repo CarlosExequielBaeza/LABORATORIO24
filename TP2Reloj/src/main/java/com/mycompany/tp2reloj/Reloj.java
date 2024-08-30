@@ -20,6 +20,8 @@ public class Reloj {
     public Reloj() {
         LocalTime horaActual = LocalTime.now();
         hora=horaActual.toString();
+        LocalDate fechaActual = LocalDate.now();
+        dia=fechaActual.toString();
     }
 
     public String getModelo() {
@@ -53,12 +55,14 @@ public class Reloj {
     public void setDia(String dia) {
         this.dia = dia;
     }
-   /*public void incrementarDia(int n){
-        LocalDate sumar =dia.plusDays(n);
-        dia=sumar;
-        System.out.println("incrementando dia: "+getDia()+"/"+dia.getMonth() );   
+   public String incrementarDia(int n){
+        LocalDate fecha = LocalDate.parse(dia);
+        fecha=fecha.plusDays(n); //devuelve objeto de tipo LocalDate por eso se lo asigno a fecha
+        dia=fecha.toString();
+        return dia;
     }
-   public void incrementarHora(int n){
+   
+  /* public void incrementarHora(int n){
         LocalDate sumar =dia.plusDays(n);
         dia=sumar;
         System.out.println("incrementando dia: "+getDia()+"/"+dia.getMonth() ); 
