@@ -35,6 +35,7 @@ public class MenuPrincipal extends javax.swing.JFrame {
         jMenuRegistro = new javax.swing.JMenu();
         jMenuItemRegistro = new javax.swing.JMenuItem();
         jMenuSalir = new javax.swing.JMenu();
+        jMenuItemSalir = new javax.swing.JMenuItem();
 
         javax.swing.GroupLayout jDesktopPane2Layout = new javax.swing.GroupLayout(jDesktopPane2);
         jDesktopPane2.setLayout(jDesktopPane2Layout);
@@ -97,6 +98,20 @@ public class MenuPrincipal extends javax.swing.JFrame {
         jMenuBar1.add(jMenuRegistro);
 
         jMenuSalir.setText("Salir");
+        jMenuSalir.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuSalirActionPerformed(evt);
+            }
+        });
+
+        jMenuItemSalir.setText("Click aquí para salir");
+        jMenuItemSalir.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItemSalirActionPerformed(evt);
+            }
+        });
+        jMenuSalir.add(jMenuItemSalir);
+
         jMenuBar1.add(jMenuSalir);
 
         setJMenuBar(jMenuBar1);
@@ -146,6 +161,15 @@ public class MenuPrincipal extends javax.swing.JFrame {
         escritorio.moveToFront(a2);
     }//GEN-LAST:event_jMenuItemRegistroActionPerformed
 
+    private void jMenuSalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuSalirActionPerformed
+        // TODO add your handling code here:        
+    }//GEN-LAST:event_jMenuSalirActionPerformed
+
+    private void jMenuItemSalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemSalirActionPerformed
+        // TODO add your handling code here:
+        this.dispose();
+    }//GEN-LAST:event_jMenuItemSalirActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -189,6 +213,7 @@ public class MenuPrincipal extends javax.swing.JFrame {
     private javax.swing.JMenuItem jMenuItemAlumno;
     private javax.swing.JMenuItem jMenuItemMateria;
     private javax.swing.JMenuItem jMenuItemRegistro;
+    private javax.swing.JMenuItem jMenuItemSalir;
     private javax.swing.JMenu jMenuMateria;
     private javax.swing.JMenu jMenuRegistro;
     private javax.swing.JMenu jMenuSalir;

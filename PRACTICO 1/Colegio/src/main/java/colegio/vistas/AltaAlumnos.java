@@ -162,9 +162,11 @@ public class AltaAlumnos extends javax.swing.JInternalFrame {
                 JOptionPane.showMessageDialog(this,"Ingrese solo numeros ");
                 jTextFieldLegajo.requestFocus();
             }
-        Alumno nuevoAlumno = new Alumno(legajo, nombre, apellido);
-        MenuPrincipal.alumnosHash.add(nuevoAlumno);
-        JOptionPane.showMessageDialog(this,"Cargado correctamente");
+        if (legajo != 0) {
+            Alumno nuevoAlumno = new Alumno(legajo, nombre, apellido);
+            MenuPrincipal.alumnosHash.add(nuevoAlumno);
+            JOptionPane.showMessageDialog(this,"Cargado correctamente");            
+        }
     }//GEN-LAST:event_jBGuardarActionPerformed
     
     //Limpio los 3 textField

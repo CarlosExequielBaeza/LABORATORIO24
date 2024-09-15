@@ -5,6 +5,7 @@
 package colegio.vistas;
 
 import com.mycompany.colegio.Materia;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -127,14 +128,29 @@ public class AltaMaterias extends javax.swing.JInternalFrame {
     }//GEN-LAST:event_jTextFieldCodigoActionPerformed
 
     private void jButtonGuardarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonGuardarActionPerformed
-        int codigo;
         String nombre;
-        int anio;
-        codigo=Integer.parseInt(jTextFieldCodigo.getText());
+        int codigo=0;
+        int anio = 0;
         nombre=jTextFieldNombMat.getText();
-        anio=Integer.parseInt(jTextFieldAnio.getText());
-        Materia nuevaMateria = new Materia (codigo, anio, nombre);
-        MenuPrincipal.materiasHash.add(nuevaMateria);
+        
+        try {
+            codigo=Integer.parseInt(jTextFieldCodigo.getText());
+        }   catch (NumberFormatException e){
+                JOptionPane.showMessageDialog(this,"El código debe ser en formato número");
+                jTextFieldCodigo.requestFocus();
+            }
+        
+        try {
+            anio=Integer.parseInt(jTextFieldAnio.getText());
+        }   catch (NumberFormatException e){
+                JOptionPane.showMessageDialog(this,"El año debe ser en formato número");
+                jTextFieldCodigo.requestFocus();
+            }
+        if (anio!=0 && codigo!=0) {
+            Materia nuevaMateria = new Materia (codigo, anio, nombre);
+            MenuPrincipal.materiasHash.add(nuevaMateria);
+            JOptionPane.showMessageDialog(this,"Materia " + nombre + " cargada correctamente");            
+        }   
         
     }//GEN-LAST:event_jButtonGuardarActionPerformed
 
