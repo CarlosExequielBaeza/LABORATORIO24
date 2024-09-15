@@ -58,15 +58,24 @@ public class Alumno {
     }
     @Override
     public String toString() {
-    return nombre + " " + apellido; // O la información que desees mostrar
+    return nombre + " " + apellido; 
     }
-    public void mostrar(){
+    /*public void mostrar(){
         for (Materia m : materias){
             System.out.println(m);
         }
     
+    }*/
+    public void mostrarMaterias() {
+    System.out.println("Materias inscritas de " + nombre + " " + apellido);
+    for (Materia m : materias) {
+        System.out.println("- " + m.getNombre()); 
     }
-    @Override
+    if (materias.isEmpty()) {
+        System.out.println("No está inscrito en ninguna materia  ");
+    }
+}
+   @Override
     public int hashCode() {
         int hash = 5;
         hash = 97 * hash + Objects.hashCode(this.apellido);

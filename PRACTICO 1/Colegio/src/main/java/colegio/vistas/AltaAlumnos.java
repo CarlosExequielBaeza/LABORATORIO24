@@ -164,7 +164,7 @@ public class AltaAlumnos extends javax.swing.JInternalFrame {
             }
         Alumno nuevoAlumno = new Alumno(legajo, nombre, apellido);
         MenuPrincipal.alumnosHash.add(nuevoAlumno);
-        //JOptionPane.showMessageDialog(this,"Cargado correctamente");
+        JOptionPane.showMessageDialog(this,"Cargado correctamente");
     }//GEN-LAST:event_jBGuardarActionPerformed
     
     //Limpio los 3 textField

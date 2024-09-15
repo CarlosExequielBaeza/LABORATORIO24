@@ -25,11 +25,8 @@ public class Colegio {
             a1.agregarMaterias(ingles);
             a1.agregarMaterias(lab);
             a2.agregarMaterias(lab);
-            //System.out.println(" asdasd" + a2.cantidadMaterias());
-           /* for (Materia m : materias){
-                System.out.println("m");
-            }*/
-            //mostrar();
+
+           
     }
 
 }

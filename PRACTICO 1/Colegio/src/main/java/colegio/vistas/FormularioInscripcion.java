@@ -137,7 +137,7 @@ public class FormularioInscripcion extends javax.swing.JInternalFrame {
         Alumno a=(Alumno)jCombAlum.getSelectedItem();
         Materia m=(Materia)jCombMate.getSelectedItem();
         a.agregarMaterias(m); //Metodo de la clase Alumno el cual es publico por eso puedo acceder, NO accedo directamente al hashSet de la clase Alumno ya que es private
-       // a.mostrar();
+        a.mostrarMaterias();
         JOptionPane.showMessageDialog(this,"Inscripto Correctamente");
     }//GEN-LAST:event_jButtInscribirActionPerformed
 
