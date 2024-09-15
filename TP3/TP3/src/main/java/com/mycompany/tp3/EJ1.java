@@ -50,11 +50,16 @@ public class EJ1 extends javax.swing.JFrame {
         jInternalFrame1.setTitle("Ingrese las Credenciales");
         jInternalFrame1.setVisible(true);
 
-        jbVerificar.setIcon(new javax.swing.ImageIcon("C:\\Users\\litob\\OneDrive\\Desktop\\wind .jpg")); // NOI18N
         jbVerificar.setText("Verificar");
         jbVerificar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jbVerificarActionPerformed(evt);
+            }
+        });
+
+        jtUsuario.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jtUsuarioActionPerformed(evt);
             }
         });
 
@@ -200,6 +205,10 @@ public class EJ1 extends javax.swing.JFrame {
     private void jbVerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbVerActionPerformed
         jpContraseña.setEchoChar((char) 0);
     }//GEN-LAST:event_jbVerActionPerformed
+
+    private void jtUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtUsuarioActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jtUsuarioActionPerformed
 
     /**
      * @param args the command line arguments

@@ -118,9 +118,6 @@
           <SubComponents>
             <Component class="javax.swing.JButton" name="jbVerificar">
               <Properties>
-                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="2" name="C:\Users\litob\OneDrive\Desktop\wind .jpg"/>
-                </Property>
                 <Property name="text" type="java.lang.String" value="Verificar"/>
               </Properties>
               <Events>
@@ -128,6 +125,9 @@
               </Events>
             </Component>
             <Component class="javax.swing.JTextField" name="jtUsuario">
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jtUsuarioActionPerformed"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JPasswordField" name="jpContrase&#xf1;a">
               <Events>

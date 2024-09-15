@@ -107,9 +107,10 @@ public class EJ2 extends javax.swing.JFrame {
     private void jbConvertirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbConvertirActionPerformed
         double num;
         double faren;
-        num=Double.parseDouble(jtDato.getText());
+        num=Double.parseDouble(jtDato.getText());//convierto el texto a double
         faren=num * 9/5 + 32;
         JOptionPane.showMessageDialog(this, "La temperatura en grados farenheit es " + faren);
+        jtDato.setText("");//Limpio la casilla
         
     }//GEN-LAST:event_jbConvertirActionPerformed
 

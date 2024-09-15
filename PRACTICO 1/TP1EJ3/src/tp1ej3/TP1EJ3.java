@@ -40,8 +40,8 @@ public class TP1EJ3 {
 
         // A) Mostrar las películas agregadas
         System.out.println("Películas agregadas:");
-        for (Pelicula elementos : peliculas) {
-            System.out.println(elementos);
+        for (Pelicula elemenos : peliculas) {
+            System.out.println(elemenos);
         }
         
         // B) Mostrar en pantalla todas las peliculas con duracion mayor a 1 hora
