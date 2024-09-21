@@ -14,8 +14,8 @@ public class Principal {
     public static void main(String[] args) {
         Contacto carlos = new Contacto("CARLOS", "BAEZA","BOLIVAR 123", "San Luis", 321);
         Directorio directorio1= new Directorio();
-        directorio1.agregarContacto(26666050, carlos);
-        Contacto x= directorio1.buscarContacto(26666050);
+        directorio1.agregarContacto(2666, carlos);
+        Contacto x= directorio1.buscarContacto(2666);
         System.out.println(x.getNombre());
         
         

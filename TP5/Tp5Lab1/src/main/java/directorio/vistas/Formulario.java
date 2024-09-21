@@ -52,7 +52,6 @@ public class Formulario extends javax.swing.JFrame {
         jButtonGuardar = new javax.swing.JButton();
         jButtonBorrar = new javax.swing.JButton();
         jButtonSalir = new javax.swing.JButton();
-        jButtonBuscarDni = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -119,19 +118,12 @@ public class Formulario extends javax.swing.JFrame {
             }
         });
 
-        jButtonBuscarDni.setText("BUSCAR");
-        jButtonBuscarDni.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButtonBuscarDniActionPerformed(evt);
-            }
-        });
-
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(29, 29, 29)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
@@ -161,13 +153,8 @@ public class Formulario extends javax.swing.JFrame {
                             .addComponent(jtApellido)
                             .addComponent(jtNombre)
                             .addComponent(jtDni))
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGap(18, 18, 18)
-                                .addComponent(jButtonBuscar))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(jButtonBuscarDni)))))
+                        .addGap(18, 18, 18)
+                        .addComponent(jButtonBuscar)))
                 .addContainerGap(59, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -182,8 +169,7 @@ public class Formulario extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jtDni, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel1)
-                    .addComponent(jButtonBuscarDni))
+                    .addComponent(jLabel1))
                 .addGap(12, 12, 12)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jtNombre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -271,7 +257,7 @@ public class Formulario extends javax.swing.JFrame {
         tele=Long.parseLong(jtTelefono.getText());
         Contacto c=Principal.directorio.buscarContacto(tele);
         if (c==null){
-        JOptionPane.showConfirmDialog(this, "No se encontró el suaurio   ");
+        JOptionPane.showMessageDialog(this, "No se encontró el suaurio   ");
         }
         else{
         String nombre=c.getNombre();
@@ -292,13 +278,10 @@ public class Formulario extends javax.swing.JFrame {
         
     }//GEN-LAST:event_jButtonBuscarActionPerformed
 
-    private void jButtonBuscarDniActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonBuscarDniActionPerformed
-        
-    }//GEN-LAST:event_jButtonBuscarDniActionPerformed
-
     private void jButtonBorrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonBorrarActionPerformed
         long tel=Long.parseLong(jtTelefono.getText());
         Principal.directorio.borrarContacto(tel);
+        
         
     }//GEN-LAST:event_jButtonBorrarActionPerformed
 
@@ -344,7 +327,6 @@ public class Formulario extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButtonBorrar;
     private javax.swing.JButton jButtonBuscar;
-    private javax.swing.JButton jButtonBuscarDni;
     private javax.swing.JButton jButtonGuardar;
     private javax.swing.JButton jButtonNuevo;
     private javax.swing.JButton jButtonSalir;
