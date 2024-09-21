@@ -18,9 +18,13 @@ import java.util.TreeMap;
 public class Directorio {
     
     //Primer valor siempre es la clave. Long CLAVE en este caso telefono
-    TreeMap<Long, Contacto> directorio = new TreeMap<>();
+    private TreeMap<Long, Contacto> directorio = new TreeMap<>();
+
+    public Directorio() {
+    }
     
-    void agregarContacto(long tel, Contacto contacto){
+    
+    public void agregarContacto(long tel, Contacto contacto){
         directorio.put(tel, contacto);
         
     }

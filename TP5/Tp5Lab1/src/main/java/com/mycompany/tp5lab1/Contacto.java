@@ -15,11 +15,17 @@ public class Contacto {
     String apellido;
     String direccion;
     String ciudad;
-    long telefono;
     long dni;
-    
-    public Contacto() {
+
+    public Contacto(String nombre, String apellido, String direccion, String ciudad, long dni) {
+        this.nombre = nombre;
+        this.apellido = apellido;
+        this.direccion = direccion;
+        this.ciudad = ciudad;
+        this.dni = dni;
     }
+    
+    
 
     public String getNombre() {
         return nombre;
@@ -51,14 +57,6 @@ public class Contacto {
 
     public void setCiudad(String ciudad) {
         this.ciudad = ciudad;
-    }
-
-    public long getTelefono() {
-        return telefono;
-    }
-
-    public void setTelefono(long telefono) {
-        this.telefono = telefono;
     }
 
     public long getDni() {
