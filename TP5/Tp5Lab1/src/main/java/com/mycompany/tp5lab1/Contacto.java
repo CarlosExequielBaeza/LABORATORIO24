@@ -70,7 +70,7 @@ public class Contacto {
 
     @Override
 public String toString() {
-    return "Contacto" +
+    return "Contacto " +
             "nombre=" + nombre  +
             " apellido=" + apellido  +
             " direccion=" + direccion  +
