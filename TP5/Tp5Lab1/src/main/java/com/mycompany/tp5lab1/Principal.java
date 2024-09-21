@@ -4,6 +4,10 @@
  */
 package com.mycompany.tp5lab1;
 
+import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.Set;
+
 /**
  *
  * @author litob
@@ -16,8 +20,18 @@ public class Principal {
         Directorio directorio1= new Directorio();
         directorio1.agregarContacto(2666, carlos);
         Contacto x= directorio1.buscarContacto(2666);
-        System.out.println(x.getNombre());
-        
+        //System.out.println(x.getNombre());
+         //Set<Long> telefonos = new HashSet<>();
+         //telefonos=directorio1.buscarTelefono("BAEZA");
+        /* for (Long telefono : telefonos) {
+             System.out.println(telefono);
+        }*/
+        ArrayList<Contacto> contactos = new ArrayList<>();
+        contactos=directorio1.buscarContactos("San Luis");
+        for (Contacto c : contactos){
+            System.out.println(c);
+        }
+         
         
     }
 }

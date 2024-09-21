@@ -68,5 +68,13 @@ public class Contacto {
     }
    
 
-    
+    @Override
+public String toString() {
+    return "Contacto" +
+            "nombre=" + nombre  +
+            " apellido=" + apellido  +
+            " direccion=" + direccion  +
+            " ciudad=" + ciudad  +
+            " dni=" + dni;
+}
 }

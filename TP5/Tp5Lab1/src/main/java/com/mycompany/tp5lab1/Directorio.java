@@ -51,21 +51,19 @@ public class Directorio {
          return telefonos;
         
     }
-    public List <Contacto> buscarContactos(String ciudad){
+    public ArrayList <Contacto> buscarContactos(String ciudad){
         ArrayList<Contacto> contactos = new ArrayList<>();
-        Set<Long> tel = new HashSet<>();//guardo todas las claves(nro tel) del directorio
+        Set<Long> tel = directorio.keySet();//guardo todas las claves(nro tel) del directorio
         Iterator<Long> it = tel.iterator();
-        while(it.hasNext()){
-            Long telef=it.next();
-            Contacto c = directorio.get(telef);
-            String ciu=c.getCiudad();
-            if(ciu.equals(ciudad)){
-                 contactos.add(c);
-             }
-            
-            
+        while (it.hasNext()) {
+        Long telef = it.next();
+        Contacto c = directorio.get(telef);
+        String ciu = c.getCiudad();
+            if (ciu.equals(ciudad)) {
+            contactos.add(c);
+            }
         }
-        return contactos ;
+        return contactos;
     }
     public void borrarContacto(long tel){
         directorio.remove(tel);
